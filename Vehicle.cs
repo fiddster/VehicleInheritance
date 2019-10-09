@@ -22,5 +22,9 @@ namespace VehicleInheritance
             Model = model;
             FuelType = FuelType;
         }
+
+        public abstract void Accelerate();
+
+        public abstract void Break();
     }
 }

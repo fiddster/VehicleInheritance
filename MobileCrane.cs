@@ -13,12 +13,12 @@
         }
 
 
-        public void Accelerate()
+        public override void Accelerate()
         {
             Velocity += 1;
         }
 
-        public void Break()
+        public override void Break()
         {
             Velocity -= 1;
         }

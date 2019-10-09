@@ -14,12 +14,12 @@ namespace VehicleInheritance
         }
 
 
-        public void Accelerate()
+        public override void Accelerate()
         {
             Velocity += 2;
         }
 
-        public void Break()
+        public override void Break()
         {
             Velocity -= 2;
         }

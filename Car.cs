@@ -7,21 +7,10 @@
 
         private bool isTrunkOpen;
 
-        public Car(string registrationNumber, string brand, string model, FuelType fuelType, CarType carType)
-                : base(registrationNumber, brand, model, fuelType)
+        public Car(string registrationNumber, string brand, string model, CarType carType)
+                : base(registrationNumber, brand, model, FuelType.Electricity)
         {
             CarType = carType;
-        }
-
-
-        public void Accelerate()
-        {
-            Velocity += 5;
-        }
-
-        public void Break()
-        {
-            Velocity -= 5;
         }
 
         public void OpenTrunk()
@@ -32,6 +21,16 @@
         public void CloseTrunk()
         {
             isTrunkOpen = false;
+        }
+
+        public override void Accelerate()
+        {
+            Velocity += 5;
+        }
+
+        public override void Break()
+        {
+            Velocity += 5;
         }
     }
 }
