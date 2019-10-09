@@ -7,7 +7,15 @@ namespace VehicleInheritance
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Car teslaModel3 = new Car(  
+                                        registrationNumber: "ABC123",
+                                        brand: "Tesla",
+                                        model: "Model 3",
+                                        fuelType: FuelType.Electricity, 
+                                        carType: CarType.Sedan
+                                        );
+
+
         }
     }
 }
