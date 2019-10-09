@@ -1,31 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace VehicleInheritance
+﻿namespace VehicleInheritance
 {
-    class Car
+    class Car : Vehicle
     {
-        public string RegistrationNumber { get; }
-
-        public string Brand { get; }
-
-        public string Model { get; }
-
-        public FuelType FuelType { get; }
-
         public CarType CarType { get; }
 
-        public ushort Velocity { get; private set; }
 
         private bool isTrunkOpen;
 
         public Car(string registrationNumber, string brand, string model, FuelType fuelType, CarType carType)
+                : base(registrationNumber, brand, model, fuelType)
         {
-            RegistrationNumber = registrationNumber;
-            Brand = brand;
-            Model = model;
-            FuelType = fuelType;
             CarType = carType;
         }
 

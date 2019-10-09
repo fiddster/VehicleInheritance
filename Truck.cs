@@ -1,28 +1,15 @@
 ﻿
 namespace VehicleInheritance
 {
-    class Truck
+    class Truck : Vehicle
     {
-        public string RegistrationNumber { get; }
-
-        public string Brand { get; }
-
-        public string Model { get; }
-
-        public FuelType FuelType { get; }
-
-        public ushort Velocity { get; private set; }
-
         private string[] cargoHold;
 
         private byte nextAvailablePosition;
 
         public Truck(string registrationNumber, string brand, string model, FuelType fuelType, byte cargoHoldCapacaty)
+            :base(registrationNumber, brand, model, fuelType)
         {
-            RegistrationNumber = registrationNumber;
-            Brand = brand;
-            Model = model;
-            FuelType = fuelType;
             cargoHold = new string[cargoHoldCapacaty];
         }
 
